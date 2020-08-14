@@ -5,9 +5,12 @@ import Character from './components/Character';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [hidden, setHidden] = useState(false); 
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-  useEffect( () => {axios.get('https://swapi.dev/api/people/')
+  useEffect( () => {
+    console.log('MAKING AXIOS REQUEST');
+    axios.get('https://swapi.dev/api/people/')
     .then(res => setCharacters(res.data.results))
     .catch(e => console.log('ERROR: ' + e))
   }, [])
@@ -23,7 +26,10 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       {
-        characters.map(char => <Character key={char.url} char={char} />)
+        characters.map(char => <Character key={char.url}
+                                          char={char}
+                                          hidden={hidden}
+                                          onClick={setHidden(!hidden)} />)
       }
     </div>
   );
