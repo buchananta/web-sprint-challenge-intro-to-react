@@ -31,26 +31,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
 1. Describe component state.
-
+    --It's pretty much just a variable who's value alters the appearance of a page somehow.
+    --It should never just be changed like a regular variable in javascript however, should use
+    --the function setup by the hook, or if using classes, setState.
 1. Describe props.
-
+    --Values that get passed around between components. If you think of Components like objects, then properties are like messages passed between them.
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-
+    --side effects are just other effects a function has besides taking a value and returning something else. In the context of react, it's mainly used by useEffect() to watch for changes in state(takes an array of state variables as the second argument), and then will cause side effects, or other changes.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
-- [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
-- [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-- [ ] Push commits: `git push origin <firstName-lastName>`
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
+- [x] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
+- [x] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
+- [x] Push commits: `git push origin <firstName-lastName>`
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: `git push origin <firstName-lastName>`
 
 ### Task 2: Project Requirements
