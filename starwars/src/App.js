@@ -28,8 +28,7 @@ const App = () => {
       {
         characters.map(char => <Character key={char.url}
                                           char={char}
-                                          hidden={hidden}
-                                          onClick={setHidden(!hidden)} />)
+                                          hidden={hidden} />)
       }
     </div>
   );
