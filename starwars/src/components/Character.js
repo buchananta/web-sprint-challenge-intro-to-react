@@ -1,5 +1,5 @@
 // Write your Character component here
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Bio from './Bio';
 
@@ -12,10 +12,18 @@ const CharacterDiv = styled.div`
   margin: 1em auto; 
   h2 {
     cursor: pointer;
+    transition-property: font-size;
+    transition-duration: .3s;
+
+    &:hover {
+      font-size: 1.8em;
+    }
   }
   div {
     display: ${({hidden}) => hidden && 'none'}
-
+    transition-property: font-size;
+    transition-duration: 1s;
+    font-size: ${({hidden}) => hidden ? '1em' : '1'}
   }   
 `
 

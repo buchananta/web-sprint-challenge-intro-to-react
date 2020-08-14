@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledP = styled.p`
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: .2em;
   letter-spacing: .14em;
 `
-
 export default function Bio({char}) {
   return (
     <>

@@ -75,11 +75,11 @@ Your finished project must include all of the following requirements:
 
 ### Required best practices
 
-- [ ] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
-- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
-- [ ] Consistent quotation usage.
-- [ ] Spell-check.
-- [ ] Schedule time to review, refine and reassess your work.
+- [x] Consistent naming. Examples: variables, functions, Components, and file/folder organization.
+- [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x] Consistent quotation usage.
+- [x] Spell-check.
+- [x] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
@@ -97,10 +97,10 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on any the following optional goals:
 
-- [ ] Make the Character component more complex and break it into several subcomponents.
+- [x] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
-- [ ] Create transitions or animations with styled-components.
+- [x] Create transitions or animations with styled-components.
 
 ## Submission format
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import './App.css';
 import Character from './components/Character';
+import helper from './helper';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -13,7 +14,9 @@ const App = () => {
   // the state properties here.
   useEffect( () => {
     axios.get(`https://swapi.dev/api/people/?page=${page}`)
-    .then(res => setCharacters(res.data.results))
+    //what is helper? a random function that doesn't actually help with anything.
+    //because it doesn't do anything to alter the functionality of the program.
+    .then(res => setCharacters(helper(res.data.results)))
     .catch(e => console.log('ERROR: ' + e))
   }, [page])
 
@@ -21,9 +24,9 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
 
-  if (characters.length === 0) return <h1>Loading</h1>
-
-
+  //dont render stuff before it exists to avoid explosions
+  if (characters.length === 0) return <h1>Loading...</h1>
+ 
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
@@ -32,6 +35,8 @@ const App = () => {
           <Character key={char.url} char={char} />)
       }
       <div>
+        {/*create a couple buttons, onClick increments or decrements the page*/}
+        {/*and the logic hides buttons if the page they would go to doesn't exist*/}
         {page !== 1 &&
           <button onClick={() => setPage(page - 1) }>Previous Page</button>
         }
